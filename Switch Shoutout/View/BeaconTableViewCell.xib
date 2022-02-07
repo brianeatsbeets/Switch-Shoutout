@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.15" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.9"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="beaconCell" rowHeight="60" id="KGk-i7-Jjw" customClass="BeaconTableViewCell" customModule="Switch_Shoutout" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="59.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beacon_cell_background" translatesAutoresizingMaskIntoConstraints="NO" id="Gow-ai-WnX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="59.5"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="sHd-SX-CTl">
+                        <rect key="frame" x="63" y="7" width="241" height="23"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="23" id="InH-mZ-vN5"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="21"/>
+                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mI8-wP-RAm">
+                        <rect key="frame" x="5" y="4.5" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="mI8-wP-RAm" secondAttribute="height" multiplier="1:1" id="Qpz-IG-dSt"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="BQ5-dc-kQK">
+                        <rect key="frame" x="63" y="30" width="241" height="21"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="qnJ-lO-q6Y"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="Gow-ai-WnX" secondAttribute="bottom" id="8I5-5o-h95"/>
+                    <constraint firstItem="BQ5-dc-kQK" firstAttribute="top" secondItem="sHd-SX-CTl" secondAttribute="bottom" id="AML-du-rKy"/>
+                    <constraint firstAttribute="bottom" secondItem="mI8-wP-RAm" secondAttribute="bottom" constant="5" id="FHe-kF-Ipp"/>
+                    <constraint firstAttribute="trailing" secondItem="Gow-ai-WnX" secondAttribute="trailing" id="H7s-JB-jYx"/>
+                    <constraint firstItem="BQ5-dc-kQK" firstAttribute="leading" secondItem="mI8-wP-RAm" secondAttribute="trailing" constant="8" id="JhA-ce-Q5J"/>
+                    <constraint firstItem="sHd-SX-CTl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="QbF-U1-MEw"/>
+                    <constraint firstItem="sHd-SX-CTl" firstAttribute="leading" secondItem="mI8-wP-RAm" secondAttribute="trailing" constant="8" id="SdV-vl-F36"/>
+                    <constraint firstAttribute="trailing" secondItem="BQ5-dc-kQK" secondAttribute="trailing" constant="16" id="WgE-0Z-Dzg"/>
+                    <constraint firstItem="Gow-ai-WnX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="abA-eg-ohy"/>
+                    <constraint firstItem="Gow-ai-WnX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="c4o-19-Wq1"/>
+                    <constraint firstAttribute="trailing" secondItem="sHd-SX-CTl" secondAttribute="trailing" constant="16" id="pQN-gW-ek8"/>
+                    <constraint firstItem="mI8-wP-RAm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4.5" id="ps0-Ke-odU"/>
+                    <constraint firstItem="mI8-wP-RAm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="xiv-Bz-Af7"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="gameImage" destination="mI8-wP-RAm" id="vsc-oS-orX"/>
+                <outlet property="gameLabel" destination="sHd-SX-CTl" id="cL7-TV-SO5"/>
+                <outlet property="userLabel" destination="BQ5-dc-kQK" id="fin-F2-amV"/>
+            </connections>
+            <point key="canvasLocation" x="25" y="60"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="beacon_cell_background" width="153.60000610351562" height="28.799999237060547"/>
+    </resources>
+</document>

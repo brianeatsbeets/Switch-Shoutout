@@ -1,0 +1,6 @@
+framework module Pods_Switch_Shoutout {
+  umbrella header "Pods-Switch Shoutout-umbrella.h"
+
+  export *
+  module * { export * }
+}

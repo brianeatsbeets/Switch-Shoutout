@@ -1,0 +1,49 @@
+Text Message Creation
+
+1. Entered into ChatWindowViewController Textbox
+	(ChatWindowViewController)
+	- private func createTextInputItem()
+		- self?.dataSource.addTextMessage(...) -> (ChatDataSource)
+
+	(ChatDataSource)
+	- func addTextMessage(...)
+		- let message = ChatMessageFactory.makeTextMessage(...) -> (ChatMessageFactory)
+		- self.messageSender.sendMessage(...) -> (ChatMessageSender)
+		- self.slidingWindow.insertItem(...) -> (SlidingDataSource)
+
+	(ChatMessageFactory)
+	- class func makeTextMessage(...) -> (ChatDataSource)
+
+	(ChatMessageSender)
+	- public func sendMessage(...)
+		- self.updateMessage(...)
+		- self.messageStatus()
+
+
+2. Incoming Message while inside ChatWindowViewController
+	(ChatWindowViewController)
+	- func observeMessages()
+		- self.dataSource.addTextMessage(...)
+
+	Rest is same as #1
+
+3. Opening Up Existing Conversation
+	(ConversationsTableViewController)
+	- override func tableView(didSelectRowAt)
+		- pushChatViewController(...)
+			- let dataSource = ChatDataSource(messages: ChatMessageFactory.makeFirebaseMessages(messages: firebaseMessages), pageSize: 50 -> (ChatMessageFactory)
+			- let viewController = ChatWindowViewController()
+			- viewController.dataSource = dataSource
+			- self.navigationController?.pushViewController(...)
+
+	(ChatMessageFactory)
+	- static func makeFirebaseMessages(...)
+		- return self.messages(...)
+	- private static func messages(...)
+		- return ChatMessageFactory.makeTextMessage(...)
+	- class func makeTextMessage(...) -> (ChatDataSource)
+
+	(ChatDataSource)
+	- init(...)
+
+	Basically the same process for opening an existing conversation from ChooseAFriendTableViewController
